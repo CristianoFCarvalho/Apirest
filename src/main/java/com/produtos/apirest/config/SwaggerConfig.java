@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import static org.springframework.data.domain.ExampleMatcher.GenericPropertyMatchers.regex;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.VendorExtension;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -36,8 +37,14 @@ private ApiInfo metaInfo() {
 			"API REST de cadastro de produtos. ",
 			"1.0",
 			"Terms of Service",
-			new Contact ("Michelli Brito" ) {
-            @Override
+			new Contact ("Michell Brito") 
+            
+            
+            
+            
+            {
+            
+                @Override
             public String name() {
                 throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
             }
@@ -56,13 +63,14 @@ private ApiInfo metaInfo() {
             public Class<? extends Annotation> annotationType() {
                 throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
             }
-        },
-			"Apache Licence Version 2.0",
-			new ArrayList<VendorExtension>()
+         
+
+			@Apache Licence Version 2.0,
+			new ArrayList<VendorExtension>()));
 			
-     };			
+     }			
     
-	return apiInfo;
+	"return apiInfo,
 
     private Predicate<String> regex(String api) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

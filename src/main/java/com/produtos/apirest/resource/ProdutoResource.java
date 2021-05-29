@@ -38,7 +38,7 @@ public class ProdutoResource {
 @GetMapping("/produtos/id")
 @ApiOperation(value="Retorna um produto único")
 	public List<Produto>listaProdutoUnico(@PathVariable(value="id")long id){
-		return produtoRepository.findAll(id);
+		return produtoRepository.findAll();
 }
 
 @PostMapping("/produto")
